@@ -1,0 +1,22 @@
+# Unity e cópias (só o site PHP vai para este repo)
+UnityDuoGame/
+UnityDuoGame copy/
+UnityDuoGame copy 2/
+UnityDuoGame copy 3/
+
+# Ambiente / sistema
+tmp/
+logs/
+*.log
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Cursor (opcional)
+.cursor/

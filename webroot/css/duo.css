@@ -1,0 +1,636 @@
+/* DuoLearn — alinhado ao visual da app Unity (DuoTheme + DuoLearnApp) */
+:root {
+    --duo-green: #58cc02;
+    --duo-green-dark: #46a302;
+    --duo-green-light: #89e219;
+    --duo-blue: #1cb0f6;
+    --duo-blue-dark: #1899d6;
+    --duo-red: #ff4b4b;
+    --duo-red-dark: #ea2b2b;
+    --duo-orange: #ff9600;
+    --duo-bg: #235390;
+    --duo-bg-deep: #1e4a7a;
+    --duo-bg-soft: #f7f7f7;
+    --duo-card: #ffffff;
+    --duo-border: #e5e5e5;
+    --duo-text: #3c3c3c;
+    --duo-text-muted: #616971;
+    --duo-radius: 16px;
+    --duo-radius-btn: 16px;
+    --duo-radius-pill: 22px;
+    --duo-font: "Nunito", system-ui, -apple-system, sans-serif;
+}
+
+.duo-body {
+    font-family: var(--duo-font);
+    color: var(--duo-text);
+    min-height: 100vh;
+}
+
+/* === Home: fundo claro + painel azul central (layout de referência) === */
+.duo-page-home {
+    background: #d4e3f2;
+}
+
+.duo-page-lesson {
+    background: #f7f7f7;
+}
+
+.duo-app {
+    min-height: 100vh;
+}
+
+.duo-lesson-page.duo-app {
+    min-height: 100vh;
+}
+
+/* Topbar: branca, risco azul fino */
+.duo-topbar {
+    background: #fff;
+    position: relative;
+}
+
+.duo-topbar-home {
+    box-shadow: none;
+}
+
+.duo-topbar-inner {
+    display: flex;
+    align-items: center;
+}
+
+.duo-topbar-rule {
+    height: 3px;
+    background: var(--duo-blue);
+    width: 100%;
+}
+
+.duo-topbar-rule-thin {
+    height: 1px;
+    background: rgba(28, 176, 246, 0.5);
+    width: 100%;
+}
+
+.duo-topbar-row {
+    min-height: 54px;
+    width: 100%;
+}
+
+.duo-topbar-center {
+    min-width: 0;
+}
+
+.duo-brand-text {
+    font-weight: 800;
+    font-size: clamp(1.2rem, 3.2vw, 1.45rem);
+    color: var(--duo-green);
+    letter-spacing: -0.02em;
+}
+
+/* Streak: pill laranja claro ao centro */
+.duo-streak-pill-home {
+    background: #fff0dc;
+    border-radius: 999px;
+    padding: 0.38rem 1.15rem;
+    min-width: 3rem;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.duo-streak-pill-home .duo-streak-num {
+    color: #d96d00;
+    font-size: 1.05rem;
+}
+
+/* XP: mini barra + texto */
+.duo-xp-row {
+    min-width: 0;
+}
+
+.duo-xp-mini-track {
+    width: 76px;
+    height: 11px;
+    border-radius: 6px;
+    background: #b8e3f7;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+@media (min-width: 420px) {
+    .duo-xp-mini-track {
+        width: 96px;
+    }
+}
+
+.duo-xp-mini-fill {
+    height: 100%;
+    border-radius: 6px;
+    background: var(--duo-blue-dark);
+    transition: width 0.35s ease;
+}
+
+.duo-xp-label-row {
+    font-size: 0.92rem;
+    line-height: 1;
+}
+
+.duo-xp-word {
+    font-weight: 700;
+    color: #5a6570;
+    margin-right: 0.15rem;
+}
+
+.duo-xp-label-row .duo-xp-num {
+    color: var(--duo-blue-dark);
+}
+
+/* Painel principal azul com borda céu */
+.duo-home-outer {
+    display: flex;
+    justify-content: center;
+}
+
+.duo-main-home {
+    width: 100%;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.duo-home-shell {
+    background: var(--duo-bg);
+    border: 2px solid #7ec8ef;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 32px rgba(25, 60, 110, 0.28);
+}
+
+/* Faixa do hero: azul um pouco mais claro */
+.duo-hero-band {
+    background: #2f6faf;
+    padding: 1.65rem 1.2rem 1.45rem;
+}
+
+.duo-hero-title {
+    font-weight: 800;
+    color: #fff;
+    font-size: clamp(1.45rem, 4vw, 1.9rem);
+    line-height: 1.2;
+}
+
+.duo-hero-sub {
+    color: rgba(255, 255, 255, 0.96) !important;
+    font-size: clamp(0.88rem, 2.3vw, 1.02rem);
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.duo-path-shell {
+    padding: 0.85rem 0.85rem 1.2rem;
+    background: var(--duo-bg);
+}
+
+.duo-path {
+    padding-left: 0;
+}
+
+.duo-path-line {
+    display: none;
+}
+
+/* Cartões brancos, borda azul clara */
+.duo-lesson-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    width: 100%;
+    min-height: 84px;
+    padding: 0.8rem 1rem;
+    background: #fff;
+    border-radius: var(--duo-radius) !important;
+    border: 1px solid #8ed4f5;
+    box-shadow: 0 2px 6px rgba(0, 35, 70, 0.1);
+    color: var(--duo-text) !important;
+    transition: transform 0.08s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.duo-lesson-btn:hover {
+    filter: brightness(1.02);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 35, 70, 0.14);
+}
+
+.duo-lesson-btn:active {
+    transform: translateY(0);
+}
+
+.duo-lesson-icon-wrap {
+    flex: 0 0 54px;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #d6effc;
+    border: 1px solid rgba(28, 176, 246, 0.35);
+}
+
+.duo-lesson-icon {
+    font-size: 1.65rem;
+    line-height: 1;
+}
+
+.duo-lesson-texts {
+    min-width: 0;
+}
+
+.duo-lesson-title {
+    font-weight: 800;
+    font-size: 1.02rem;
+    line-height: 1.25;
+}
+
+.duo-lesson-sub {
+    font-size: 0.875rem;
+    color: var(--duo-text-muted);
+    margin-top: 0.15rem;
+    line-height: 1.3;
+}
+
+.duo-lesson-chevron-wrap {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #d6effc;
+    border: 1px solid rgba(28, 176, 246, 0.35);
+}
+
+.duo-chevron {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--duo-blue-dark);
+    line-height: 1;
+}
+
+/* Chips antigos (outras páginas, se existirem) */
+.duo-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: var(--duo-radius-pill);
+    padding: 0.35rem 0.65rem;
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.duo-chip-streak {
+    background: #fff7eb;
+}
+
+.duo-chip-streak .duo-streak-num {
+    color: var(--duo-orange);
+}
+
+.duo-chip-xp .duo-xp-num {
+    color: var(--duo-blue-dark);
+}
+
+/* === Cabeçalho da lição (como Unity LessonHeader) === */
+.duo-lesson-header {
+    background: linear-gradient(180deg, #feffff 0%, #f5f8fc 100%);
+    box-shadow: 0 4px 14px rgba(15, 40, 72, 0.1);
+    z-index: 1020;
+}
+
+.duo-lesson-header-inner {
+    padding-top: 0.75rem;
+    padding-bottom: 0.5rem;
+}
+
+.duo-lesson-toolbar {
+    min-height: 52px;
+}
+
+.duo-back-pill {
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #e8f0fa;
+    color: #475056 !important;
+    font-size: 1.15rem;
+    font-weight: 800;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transition: background 0.12s ease, transform 0.08s ease;
+}
+
+.duo-back-pill:hover {
+    background: #dce8f4;
+    color: #2c3338 !important;
+}
+
+.duo-back-pill:active {
+    transform: scale(0.96);
+}
+
+.duo-lesson-title-header {
+    font-weight: 800;
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    color: var(--duo-text);
+    min-width: 0;
+}
+
+.duo-counter-pill {
+    flex: 0 0 auto;
+    padding: 0.45rem 0.65rem;
+    min-width: 5.5rem;
+    text-align: center;
+    border-radius: var(--duo-radius-pill);
+    background: rgba(28, 176, 246, 0.14);
+    color: var(--duo-blue-dark);
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 4px rgba(28, 176, 246, 0.15);
+}
+
+.duo-progress-track-wrap {
+    width: 100%;
+}
+
+.duo-progress.duo-progress-lesson {
+    height: 18px;
+    border-radius: 9px;
+    background: #e1e8ee;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.duo-progress-lesson .duo-progress-bar {
+    height: 100%;
+    border-radius: 9px;
+    background: var(--duo-green);
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.08);
+    transition: width 0.35s ease, background 0.25s ease;
+}
+
+.duo-progress-lesson .duo-progress-bar.duo-progress-bar--inactive {
+    background: #aeb8c2;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+}
+
+.duo-lesson-header-rule {
+    height: 3px;
+    background: var(--duo-blue);
+    width: 100%;
+}
+
+.duo-lesson-main {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: calc(100vh - 200px);
+}
+
+/* Cartão pergunta — estilo “jogo” (Unity / Duolingo) */
+.duo-question-card {
+    border-radius: 18px !important;
+    background: var(--duo-card);
+    border: 2px solid var(--duo-border) !important;
+    box-shadow: 0 4px 0 #d1d1d1, 0 8px 24px rgba(15, 40, 72, 0.08);
+    overflow: hidden;
+}
+
+.duo-question-card-body {
+    padding: 1.75rem 1.35rem 2rem;
+}
+
+@media (min-width: 576px) {
+    .duo-question-card-body {
+        padding: 2rem 1.75rem 2.25rem;
+    }
+}
+
+.duo-prompt-label {
+    letter-spacing: 0.08em;
+    font-size: 0.72rem !important;
+    color: #777 !important;
+}
+
+.duo-phrase {
+    color: var(--duo-text);
+    min-height: 3rem;
+    line-height: 1.25;
+    font-size: clamp(1.65rem, 5vw, 2.35rem) !important;
+    font-weight: 800 !important;
+}
+
+/* Lista de opções: coluna única, largura total do cartão */
+.duo-choices.d-grid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+}
+
+/* Bootstrap .btn: não sobrescrever bordas do .duo-choice */
+.duo-choice.btn {
+    --bs-btn-border-width: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botões de opção — relevo como no jogo */
+.duo-choice {
+    border-radius: var(--duo-radius-btn) !important;
+    border: 2px solid var(--duo-border) !important;
+    border-bottom-width: 4px !important;
+    font-weight: 700 !important;
+    font-size: 1.08rem !important;
+    padding: 1rem 1.15rem !important;
+    min-height: 58px;
+    background: #fff !important;
+    color: var(--duo-text) !important;
+    text-align: left !important;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.08s ease;
+}
+
+.duo-choice:hover:not(:disabled) {
+    background: #f4f7fa !important;
+}
+
+.duo-choice:active:not(:disabled) {
+    transform: translateY(2px);
+    border-bottom-width: 2px !important;
+}
+
+.duo-choice.is-selected {
+    border-color: var(--duo-blue) !important;
+    background: #ddf4ff !important;
+}
+
+.duo-choice.is-correct {
+    border-color: var(--duo-green-dark) !important;
+    background: #d7ffb8 !important;
+    color: var(--duo-green-dark) !important;
+}
+
+.duo-choice.is-wrong {
+    border-color: var(--duo-red-dark) !important;
+    background: #ffdfe0 !important;
+    color: var(--duo-red-dark) !important;
+}
+
+.duo-choice:disabled {
+    opacity: 1;
+    cursor: default;
+}
+
+/* Compat: .duo-card genérico */
+.duo-card.card {
+    border: none;
+}
+
+/* Rodapé feedback */
+.duo-feedback-footer {
+    background: #fff;
+    border-top: 3px solid var(--duo-border);
+    box-shadow: 0 -8px 28px rgba(15, 40, 72, 0.12);
+    z-index: 1040;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.duo-feedback-footer.is-correct {
+    background: #d7ffb8;
+    border-top-color: var(--duo-green);
+}
+
+.duo-feedback-footer.is-wrong {
+    background: #ffdfe0;
+    border-top-color: var(--duo-red);
+}
+
+.duo-feedback-row {
+    align-items: center;
+}
+
+.duo-feedback-msg {
+    min-width: 0;
+}
+
+#feedback-msg.is-correct-text {
+    color: var(--duo-green-dark);
+    font-size: 1.1rem;
+}
+
+#feedback-msg.is-wrong-text {
+    color: var(--duo-red-dark);
+    font-size: 1.1rem;
+}
+
+.duo-btn-primary.duo-btn-next {
+    background: var(--duo-green) !important;
+    border: none !important;
+    border-bottom: 4px solid var(--duo-green-dark) !important;
+    color: #fff !important;
+    font-weight: 800 !important;
+    border-radius: var(--duo-radius-btn) !important;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1rem !important;
+    min-width: 268px;
+    max-width: 100%;
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.duo-btn-primary.duo-btn-next:hover {
+    filter: brightness(1.05);
+    color: #fff !important;
+}
+
+.duo-btn-primary.duo-btn-next:active {
+    border-bottom-width: 2px !important;
+    transform: translateY(2px);
+}
+
+.pb-140 {
+    padding-bottom: 140px !important;
+}
+
+/* Barra de progresso legada (se usada noutros sítios) */
+.duo-progress:not(.duo-progress-lesson) {
+    height: 14px;
+    background: #e5e5e5;
+    overflow: hidden;
+}
+
+.duo-progress:not(.duo-progress-lesson) .duo-progress-bar {
+    height: 100%;
+    background: var(--duo-green);
+    transition: width 0.35s ease;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.duo-back {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #afafaf !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 576px) {
+    .duo-lesson-btn {
+        min-height: 80px;
+        gap: 0.75rem;
+        padding: 0.75rem 0.85rem;
+    }
+
+    .duo-lesson-icon-wrap {
+        flex-basis: 52px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .duo-btn-primary.duo-btn-next {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .duo-feedback-row {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+
+    .duo-xp-mini-track {
+        width: 64px;
+    }
+
+    .duo-streak-pill-home {
+        padding: 0.32rem 0.75rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .duo-brand-text {
+        font-size: 1.05rem;
+    }
+
+    .duo-xp-label-row {
+        font-size: 0.82rem;
+    }
+}
